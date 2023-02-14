@@ -68,17 +68,13 @@
 
 /** MEJORO EL CODIGO DE ARRIBA */
 /** PRE ENTREGA 2 */
+// La idea es hacer una especie de base de datos
+//El cliente me pasa información de su mascota y lo guardamos en el sistema
+//PROXIMAMENTE MEJORAS <3
 
-let i = 0;
-let veterinarios = [
-  { nombre: "Luisa", edad: 21, profesión: "Cirujana" },
-  { nombre: "Juan", edad: 30, profesión: "Medico Clinico" },
-
-  { nombre: "Lucas", edad: 19, profesión: "Practicante" },
-  { nombre: "Veronca", edad: 25, profesión: "Cirujana" },
-];
+let veterinariosDisponibles = ["Luisa", "Lucas", "Veronica", "Macarena"];
 let nombreAnimal = prompt("Ingrese el nombre del animal ");
-let veterinarioDelAnimal = prompt("Elija el veterinario " + veterinarios);
+let veterinarioDelAnimal;
 let comidaAnimal = prompt("Ingrese la cantidad en pesos que come el animal");
 let nuevoAnimal;
 
@@ -111,43 +107,11 @@ function agregar() {
   baseDatos.push(nuevoAnimal);
   console.log(baseDatos);
 }
+//Recorriendo el array
+do {
+  veterinarioDelAnimal = prompt(
+    "Elija el veterinario disponible " + veterinariosDisponibles
+  );
+} while (!veterinariosDisponibles.includes(veterinarioDelAnimal));
 
 capturar();
-// const item = veterinarios.find((element) => {
-//   return if (veterinarioDelAnimal == element) {
-//        break;
-//     }
-
-// });
-// console.log(item);
-
-// function buscar(element) {
-//   return element == veterinarioDelAnimal;
-// }
-// console.log(veterinarios.find(buscar));
-// veterinarios.forEach((element) => {
-//   veterinarioDelAnimal == element;
-//   break;
-//   // if (veterinarioDelAnimal == element) {
-//   //   break;
-//   // }
-// });
-
-// for (i = 0; i < nombresDeVeterinarios.length; i++) {
-//   do {
-//     veterinarioDelAnimal = prompt("Elija el veterinario disponible ");
-//   } while (veterinarioDelAnimal != nombresDeVeterinarios.length);
-//   console.log(nombresDeVeterinarios[i]);
-// }
-// for (const veterinarios of nombresDeVeterinarios) {
-//   do {
-//     veterinarioDelAnimal = prompt("Elija el veterinario disponible ");
-//   } while (veterinarioDelAnimal != nombresDeVeterinarios);
-//   console.log(veterinarios);
-// }
-//do {
-// do {
-//     veterinarioDelAnimal = prompt("Elija el veterinario disponible ");
-//   } while (veterinarioDelAnimal != nombresDeVeterinarios);
-//   i++;
-// } while (i < nombreAnimal);
